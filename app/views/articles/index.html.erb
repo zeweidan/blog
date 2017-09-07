@@ -1,0 +1,28 @@
+<h1>On the Air</h1>
+<h4>Follow Jack to travel</h4>
+
+<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+<table>
+  <tr>
+    <td>Title</td>
+    <td>Text</td>
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= link_to article.title, article_path(article) %></td>
+    </tr>
+    <tr>
+      <td><%= truncate article.text %></td>
+    </tr>
+    <tr>  
+      <td><i>-<%= time_ago_in_words article.created_at %> ago </i></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      <td><%= link_to 'Delete', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+<br />
+<%= link_to 'New Article', new_article_path %>
