@@ -11,6 +11,7 @@
   
   <%= @article.text %>
 </p>
+<%= link_to '编辑', edit_article_path(@article) %> 
 <hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
 
 
@@ -23,5 +24,4 @@
 <h4>添加评论:</h4>
 <%= render 'comments/form' %>
 
-<%= link_to '编辑', edit_article_path(@article) %> |
 <%= link_to '返回', articles_path %>
