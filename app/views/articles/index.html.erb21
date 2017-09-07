@@ -1,0 +1,24 @@
+<h1>在云上</h1>
+<h4>随Jack去旅行</h4>
+
+<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+<table>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= link_to article.title, article_path(article) %></td>
+    </tr>
+    <tr>
+      <td><%= truncate article.text %></td>
+    </tr>
+    <tr>  
+      <td><i>-<%= time_ago_in_words article.created_at %> ago </i></td>
+      <td><%= link_to '编辑', edit_article_path(article) %></td>
+      <td><%= link_to '删除', article_path(article),
+              method: :delete,
+              data: { confirm: '确定删除?' } %></td>
+    </tr>
+  <% end %>
+</table>
+<br />
+<%= link_to '发表新文章', new_article_path %>
