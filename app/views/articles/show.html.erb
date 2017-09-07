@@ -11,7 +11,10 @@
   
   <%= @article.text %>
 </p>
-<%= link_to '编辑', edit_article_path(@article) %> 
+<%= link_to '编辑', edit_article_path(@article) %> |
+<%= link_to '删除', article_path(@article),
+              method: :delete,
+              data: { confirm: '确定删除?' } %>
 <hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
 
 
