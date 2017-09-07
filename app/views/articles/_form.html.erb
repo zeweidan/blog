@@ -16,17 +16,17 @@
   <% end %>
  
   <p>
-    <%= f.label :Title %><br>
+    <%= f.label :标题 %><br>
     <%= f.text_field :title %>
   </p>
  
   <p>
-    <%= f.label :Content %><br>
-    <%= f.text_area :text %>
+    <%= f.label :内容 %><br>
+    <%= f.text_area :text, :size => '40x10' %>
   </p>
  
   <p>
-    <%= f.submit 'Post the Article' %>
+    <%= f.submit '发表文章' %>
   </p>
  
 <% end %>

@@ -1,5 +1,5 @@
-<h1>On the Air</h1>
-<h4>Follow Jack to travel</h4>
+<h1>在云上</h1>
+<h4>随Jack去旅行</h4>
 <hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
 
 <p>
@@ -14,14 +14,14 @@
 <hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
 
 
-<h4>All comments</h4>
+<h4>所有评论</h4>
 <%= render @article.comments %>
 
 <hr style="height:1px;border:none;border-top:1px solid #555555;" />
 
 
-<h4>Add Comment:</h4>
+<h4>添加评论:</h4>
 <%= render 'comments/form' %>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Return', articles_path %>
+<%= link_to '编辑', edit_article_path(@article) %> |
+<%= link_to '返回', articles_path %>
